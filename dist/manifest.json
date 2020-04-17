@@ -1,0 +1,14 @@
+{
+    "manifest_version": 2,
+    "name": "Slackのサイドバーをブラウザでも有効化",
+    "description": "Slackのサイドバーをブラウザでも表示するようにします。",
+    "version": "0.1.0",
+    "content_scripts": [{
+        "matches": ["https://app.slack.com/client/*"],
+        "js": ["content.js"],
+        "css": ["inject.css"],
+        "run_at": "document_end"
+    }],
+    "permissions": ["https://app.slack.com/client/"],
+    "web_accessible_resources": ["inject.js"]
+}
